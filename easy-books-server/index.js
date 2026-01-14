@@ -42,6 +42,12 @@ async function run() {
             res.json(result);
         })
 
+        app.get("/books-latest", async (req, res) => {
+            const cursor = booksCollection.find().limit(8);
+            const result = await cursor.toArray();
+            res.json(result);
+        })
+
         app.get("/books/:id", async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id)};
