@@ -4,7 +4,7 @@ import { ShoppingCart, Eye, Star } from 'lucide-react';
 
 const BookCard = ({ book }) => {
     return (
-        <div className="group bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-violet-100 transition-all duration-500">
+        <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-violet-100 transition-all duration-500">
             {/* Image Section */}
             <div className="relative h-72 overflow-hidden">
                 <img 

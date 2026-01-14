@@ -15,13 +15,8 @@ const WhyChooseUs = () => {
                     
                     {/* LEFT SIDE: Content & Text */}
                     <div className="w-full lg:w-1/2 space-y-8">
-                        <div className="inline-flex items-center space-x-2 bg-violet-50 px-4 py-2 rounded-full">
-                            <Zap size={16} className="text-violet-600 fill-violet-600" />
-                            <span className="text-violet-700 text-sm font-bold uppercase tracking-wider">Premium Experience</span>
-                        </div>
-                        
-                        <h2 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight">
-                            Elevate Your <span className="text-violet-600">Reading</span> Journey With Us
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                            Elevate Your Reading<span className="text-violet-600"> Journey With Us</span>
                         </h2>
                         
                         <p className="text-gray-500 text-lg leading-relaxed">
@@ -31,7 +26,7 @@ const WhyChooseUs = () => {
                         <div className="space-y-6">
                             {/* Feature Item 1 */}
                             <div className="flex gap-4 group">
-                                <div className="flex-shrink-0 w-12 h-12 bg-white shadow-xl shadow-violet-100 rounded-xl flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-all duration-300">
+                                <div className="shrink-0 w-12 h-12 bg-white shadow-xl shadow-violet-100 rounded-xl flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-all duration-300">
                                     <ShieldCheck size={24} />
                                 </div>
                                 <div>

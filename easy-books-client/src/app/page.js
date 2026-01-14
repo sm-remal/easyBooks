@@ -4,6 +4,7 @@ import FeaturedCategories from "@/components/Landing/FeaturedCategories";
 import Hero from "@/components/Landing/Hero";
 import Newsletter from "@/components/Landing/Newsletter";
 import Testimonials from "@/components/Landing/Testimonials";
+import TrendingBooks from "@/components/Landing/TrendingBooks";
 import WhyChooseUs from "@/components/Landing/WhyChooseUs";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <div>
       <Hero></Hero>
       <FeaturedCategories></FeaturedCategories>
+      <TrendingBooks></TrendingBooks>
       <WhyChooseUs></WhyChooseUs>
       <AuthorSpotlight></AuthorSpotlight>
       <Testimonials></Testimonials>

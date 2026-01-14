@@ -52,19 +52,6 @@ const FeaturedCategories = () => {
                         </Link>
                     ))}
                 </div>
-
-                {/* View All Button */}
-                <div className="mt-12 text-center">
-                    <Link 
-                        href="/books" 
-                        className="inline-flex items-center text-violet-600 font-bold hover:text-violet-700 transition-colors"
-                    >
-                        View All Categories 
-                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </Link>
-                </div>
             </div>
         </section>
     );
