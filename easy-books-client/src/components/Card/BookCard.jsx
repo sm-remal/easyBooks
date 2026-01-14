@@ -1,15 +1,18 @@
 "use client";
 import React from 'react';
 import { ShoppingCart, Eye, Star } from 'lucide-react';
+import Image from 'next/image';
 
 const BookCard = ({ book }) => {
     return (
         <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-violet-100 transition-all duration-500">
             {/* Image Section */}
             <div className="relative h-72 overflow-hidden">
-                <img 
+                <Image 
                     src={book.image} 
                     alt={book.title} 
+                    width={120}
+                    height={220}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-violet-600 font-bold text-sm shadow-sm">

@@ -1,15 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'images.unsplash.com',
+  //     },
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'i.pinimg.com',
+  //     },
+  //   ],
+  // },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'i.pinimg.com',
-      },
+    domains: [
+      'images.unsplash.com',
+      'i.pinimg.com',
+      'images-na.ssl-images-amazon.com',
     ],
   },
 };
