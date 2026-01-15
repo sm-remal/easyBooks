@@ -21,7 +21,7 @@ const RegisterPage = () => {
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
 
-        // পাসওয়ার্ড ম্যাচিং চেক
+        // Checking password match
         if (password !== confirmPassword) {
             setError("Passwords do not match!");
             setIsLoading(false);
@@ -29,7 +29,7 @@ const RegisterPage = () => {
         }
 
         try {
-            // ১. ব্যাকএন্ডে ইউজার তৈরি করা
+            // Create Backend User
             const response = await fetch("http://localhost:5000/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -39,7 +39,8 @@ const RegisterPage = () => {
             const data = await response.json();
 
             if (response.ok) {
-                // ২. রেজিস্ট্রেশন সফল হলে অটোমেটিক লগইন করানো
+                
+                // Auto Login after Registration
                 const loginRes = await signIn("credentials", {
                     email,
                     password,

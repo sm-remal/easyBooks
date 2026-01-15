@@ -11,13 +11,13 @@ const LoginPage = () => {
     const [error, setError] = useState("");
     const router = useRouter();
 
-    // সোশ্যাল লগইন (Google/GitHub)
+    // Login with (Google/GitHub)
     const handleSocialLogin = async (provider) => {
         setIsLoading(true);
         await signIn(provider, { callbackUrl: '/' });
     };
 
-    // ইমেইল এবং পাসওয়ার্ড লগইন
+    // Email and Password Login
     const handleCredentialLogin = async (e) => {
         e.preventDefault();
         setIsLoading(true);
@@ -30,14 +30,14 @@ const LoginPage = () => {
             const res = await signIn("credentials", {
                 email,
                 password,
-                redirect: false, // আমরা ম্যানুয়ালি হ্যান্ডেল করব যাতে এরর মেসেজ দেখানো যায়
+                redirect: false, 
             });
 
             if (res?.error) {
                 setError("Invalid email or password. Please try again.");
                 setIsLoading(false);
             } else {
-                router.push("/"); // লগইন সফল হলে হোম পেজে পাঠাবে
+                router.push("/"); 
                 router.refresh();
             }
         } catch (err) {
