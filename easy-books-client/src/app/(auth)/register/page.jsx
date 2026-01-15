@@ -68,7 +68,7 @@ const RegisterPage = () => {
             <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-violet-100 rounded-full blur-[100px] opacity-60 -z-10"></div>
             <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-100 rounded-full blur-[100px] opacity-60 -z-10"></div>
 
-            <div className="flex w-full max-w-5xl bg-white rounded-[2.5rem] shadow-2xl overflow-hidden min-h-[700px]">
+            <div className="flex w-full max-w-5xl bg-white rounded-[2.5rem] overflow-hidden min-h-[700px]">
                 
                 {/* --- LEFT VISUAL SECTION --- */}
                 <div className="hidden lg:flex w-1/2 bg-violet-600 p-12 text-white flex-col justify-between relative overflow-hidden">

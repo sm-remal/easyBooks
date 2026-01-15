@@ -155,7 +155,7 @@ const ContactPage = () => {
                                     ></textarea>
                                 </div>
 
-                                <button type="submit" className="w-full bg-violet-600 text-white py-5 rounded-xl font-bold text-lg hover:bg-violet-700 transition-all shadow-xl shadow-violet-200 flex items-center justify-center gap-2 group">
+                                <button type="submit" className="w-full bg-violet-600 text-white py-3 rounded-xl font-bold hover:bg-violet-700 transition-all shadow-xl shadow-violet-200 flex items-center justify-center gap-2 group">
                                     Send Message 
                                     <Send size={20} className="group-hover:translate-x-1 transition-transform" />
                                 </button>

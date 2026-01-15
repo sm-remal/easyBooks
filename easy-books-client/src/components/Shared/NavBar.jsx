@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react'; 
 import { LogOut, User } from 'lucide-react'; 
 import Image from 'next/image';
+import NavLink from '../Button/NavLink';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,13 +45,13 @@ const NavBar = () => {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
-                            <Link 
+                            <NavLink 
                                 key={link.name} 
                                 href={link.href} 
                                 className="text-gray-700 hover:text-violet-500 font-medium transition-colors"
                             >
                                 {link.name}
-                            </Link>
+                            </NavLink>
                         ))}
 
                         {/* --- Auth Logic Start --- */}

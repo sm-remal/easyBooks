@@ -6,7 +6,7 @@ import Image from 'next/image';
 const AboutPage = () => {
     return (
         <div className="bg-white min-h-screen pt-10 pb-20">
-            
+
             {/* --- Hero Section --- */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -22,28 +22,32 @@ const AboutPage = () => {
                             At EasyBooks, we believe stories shape who we are. We started with a simple mission: to connect every reader with their next life-changing book, effortlessly and affordably.
                         </p>
                         <div className="flex gap-4 pt-4">
-                            <Link href="/books" className="px-8 py-4 bg-violet-600 text-white rounded-2xl font-bold hover:bg-violet-700 transition-all shadow-xl shadow-violet-200">
+                            <Link href="/books" className="px-8 py-3 bg-violet-600 text-white rounded-2xl font-bold hover:bg-violet-700 transition-all shadow-xl shadow-violet-200">
                                 Explore Collection
                             </Link>
-                            <button className="px-8 py-4 border-2 border-gray-100 text-gray-700 rounded-2xl font-bold hover:border-violet-200 transition-all">
+                            <button className="px-8 py-3 border-2 border-gray-100 text-gray-700 rounded-2xl font-bold hover:border-violet-200 transition-all">
                                 Read Our Blog
                             </button>
                         </div>
                     </div>
-                    
+
                     <div className="w-full lg:w-1/2 relative">
                         {/* Abstract Background Blob */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-violet-100 to-blue-50 rounded-full blur-[80px] -z-10"></div>
-                        
+
                         <div className="grid grid-cols-2 gap-4">
-                            <img 
-                                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                alt="Library" 
+                            <Image
+                                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Library"
+                                width={400}
+                                height={400}
                                 className="w-full h-64 object-cover rounded-[2rem] shadow-2xl translate-y-8"
                             />
-                            <img 
-                                src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                alt="Reading" 
+                            <Image
+                                src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Reading"
+                                width={400}
+                                height={400}
                                 className="w-full h-64 object-cover rounded-[2rem] shadow-2xl"
                             />
                         </div>
@@ -115,9 +119,11 @@ const AboutPage = () => {
                     {[1, 2, 3, 4].map((member) => (
                         <div key={member} className="group text-center">
                             <div className="relative overflow-hidden rounded-3xl mb-4 aspect-[4/5]">
-                                <img 
+                                <Image
                                     src={`https://images.unsplash.com/photo-${member === 1 ? '1560250097-0b93528c311a' : member === 2 ? '1573496359142-b8d87734a5a2' : member === 3 ? '1580489944761-15a19d654956' : '1535713875002-d1d0cf377fde'}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                                    alt="Team Member" 
+                                    alt="Team Member"
+                                    width={400}
+                                    height={400}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
                                 />
                             </div>
@@ -133,21 +139,21 @@ const AboutPage = () => {
                 <div className="bg-gray-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-violet-600 rounded-full blur-[100px] opacity-30"></div>
                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 rounded-full blur-[100px] opacity-30"></div>
-                    
+
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6 relative z-10">
                         Ready to start your journey?
                     </h2>
                     <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto relative z-10">
                         Join 12,000+ readers who are discovering their next favorite book with EasyBooks today.
                     </p>
-                    <Link href="/books" className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-violet-900/50 relative z-10">
+                    <Link href="/books" className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white px-10 py-3.5 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-violet-900/50 relative z-10">
                         Browse Books <ArrowRight size={20} />
                     </Link>
                 </div>
             </div>
 
         </div>
-    ); 
+    );
 };
 
 export default AboutPage;

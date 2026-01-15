@@ -34,17 +34,45 @@ const handler = NextAuth({
         if (res.ok && user) {
           return user;
         }
-        
+
         // If user & password do not match then return
         return null;
       }
     }),
   ],
-  pages: {
-    signIn: '/login',
-  },
   session: {
     strategy: "jwt", 
+    maxAge: 30 * 24 * 60 * 60, 
+    updateAge: 24 * 60 * 60, 
+  },
+  cookies: {
+    sessionToken: {
+      name: `next-auth.session-token`,
+      options: {
+        httpOnly: true, 
+        sameSite: 'lax',
+        path: '/',
+        secure: process.env.NODE_ENV === "production" 
+      }
+    }
+  },
+  callbacks: {
+    async jwt({ token, user }) {
+      
+      if (user) {
+        token.id = user._id || user.id;
+        token.role = user.role || "user";
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      
+      if (token) {
+        session.user.id = token.id;
+        session.user.role = token.role;
+      }
+      return session;
+    }
   },
   secret: process.env.NEXTAUTH_SECRET,
 });

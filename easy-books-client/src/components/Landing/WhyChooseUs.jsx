@@ -6,6 +6,7 @@ import {
   Globe, 
   ArrowRight 
 } from 'lucide-react';
+import Image from 'next/image';
 
 const WhyChooseUs = () => {
     return (
@@ -37,7 +38,7 @@ const WhyChooseUs = () => {
 
                             {/* Feature Item 2 */}
                             <div className="flex gap-4 group">
-                                <div className="flex-shrink-0 w-12 h-12 bg-white shadow-xl shadow-violet-100 rounded-xl flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-all duration-300">
+                                <div className="shrink-0 w-12 h-12 bg-white shadow-xl shadow-violet-100 rounded-xl flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-all duration-300">
                                     <Globe size={24} />
                                 </div>
                                 <div>
@@ -52,7 +53,7 @@ const WhyChooseUs = () => {
                         </button>
                     </div>
 
-                    {/* RIGHT SIDE: Visual Layout (The "Sundor" Part) */}
+                    {/* RIGHT SIDE: Visual Layout */}
                     <div className="w-full lg:w-1/2 relative">
                         {/* Background Decoration */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/20 rounded-full blur-3xl"></div>
@@ -60,9 +61,11 @@ const WhyChooseUs = () => {
                         <div className="relative grid grid-cols-2 gap-4">
                             {/* Main Large Image Card */}
                             <div className="col-span-1 pt-12">
-                                <img 
+                                <Image 
                                     src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1000&auto=format&fit=crop" 
                                     alt="Books" 
+                                    width={400}
+                                    height={400}
                                     className="rounded-3xl shadow-2xl transform -rotate-6 hover:rotate-0 transition-all duration-500 w-full h-[350px] object-cover border-4 border-white"
                                 />
                             </div>
@@ -74,9 +77,11 @@ const WhyChooseUs = () => {
                                     <p className="text-gray-500 text-sm font-bold uppercase">Customer Satisfaction</p>
                                 </div>
                                 
-                                <img 
+                                <Image 
                                     src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1000&auto=format&fit=crop" 
                                     alt="Reading" 
+                                    width={400}
+                                    height={400}
                                     className="rounded-3xl shadow-2xl rotate-6 hover:rotate-0 transition-all duration-500 w-full h-[250px] object-cover border-4 border-white"
                                 />
                             </div>
@@ -86,13 +91,13 @@ const WhyChooseUs = () => {
                         <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white py-4 px-8 rounded-2xl shadow-xl flex items-center gap-4 border border-violet-100 whitespace-nowrap">
                             <div className="flex -space-x-3">
                                 <div className="w-10 h-10 rounded-full bg-violet-200 border-2 border-white overflow-hidden">
-                                    <img src="https://i.pravatar.cc/100?u=1" alt="user" />
+                                    <Image src="https://i.pravatar.cc/100?u=1" width={350} height={350} alt="user" />
                                 </div>
                                 <div className="w-10 h-10 rounded-full bg-violet-300 border-2 border-white overflow-hidden">
-                                    <img src="https://i.pravatar.cc/100?u=2" alt="user" />
+                                    <Image src="https://i.pravatar.cc/100?u=2" width={350} height={350} alt="user" />
                                 </div>
                                 <div className="w-10 h-10 rounded-full bg-violet-400 border-2 border-white overflow-hidden">
-                                    <img src="https://i.pravatar.cc/100?u=3" alt="user" />
+                                    <Image src="https://i.pravatar.cc/100?u=3" width={350} height={350} alt="user" />
                                 </div>
                             </div>
                             <div>

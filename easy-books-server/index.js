@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require("cors");
-require('dotenv').config();
+require('dotenv').config(); 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const bcrypt = require('bcryptjs');
 
@@ -40,7 +40,6 @@ async function run() {
         app.post("/register", async (req, res) => {
             const { name, email, password } = req.body;
 
-            
             const existingUser = await usersCollection.findOne({ email });
             if (existingUser) {
                 return res.status(400).json({ message: "User already exists!" });
@@ -75,7 +74,7 @@ async function run() {
                 return res.status(401).json({ message: "Invalid password!" });
             }
 
-            // Password save
+            
             const { password: _, ...userData } = user;
             res.json(userData);
         });

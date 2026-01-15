@@ -17,6 +17,10 @@ const nextConfig = {
       'images.unsplash.com',
       'i.pinimg.com',
       'images-na.ssl-images-amazon.com',
+      'lh3.googleusercontent.com',
+      'avatars.githubusercontent.com',
+      '*',
+      'i.pravatar.cc'
     ],
   },
 };

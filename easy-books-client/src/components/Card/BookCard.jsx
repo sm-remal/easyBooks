@@ -12,8 +12,8 @@ const BookCard = ({ book }) => {
                 <Image 
                     src={book.image} 
                     alt={book.title} 
-                    width={120}
-                    height={220}
+                    width={420}
+                    height={480}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-violet-600 font-bold text-sm shadow-sm">
@@ -24,9 +24,9 @@ const BookCard = ({ book }) => {
                     <button className="p-3 bg-white rounded-full text-violet-600 hover:bg-violet-600 hover:text-white transition-all">
                         <ShoppingCart size={20} />
                     </button>
-                    <button className="p-3 bg-white rounded-full text-violet-600 hover:bg-violet-600 hover:text-white transition-all">
+                    <Link href={`/books/${book._id}`} className="p-3 bg-white rounded-full text-violet-600 hover:bg-violet-600 hover:text-white transition-all">
                         <Eye size={20} />
-                    </button>
+                    </Link>
                 </div>
             </div>
 

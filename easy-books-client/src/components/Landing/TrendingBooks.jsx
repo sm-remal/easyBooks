@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import BookCard from '../Card/BookCard';
 import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import BookCardSkeleton from '../Skeleton/BookCardSkeleton';
 
 const TrendingBooks = () => {
     const [books, setBooks] = useState([]);
@@ -23,10 +24,11 @@ const TrendingBooks = () => {
 
     if (loading) {
         return (
-            <div className="py-20 text-center">
-                <div className="animate-spin inline-block w-8 h-8 border-4 border-violet-500 border-t-transparent rounded-full"></div>
-                <p className="mt-2 text-gray-500">Loading trending books...</p>
-            </div>
+            <div className='grid grid-cols-4 gap-8'>
+            {
+                [...Array(8).map((_, index) => <BookCardSkeleton key={index}></BookCardSkeleton>)]
+            }
+        </div>
         );
     }
 
@@ -36,7 +38,7 @@ const TrendingBooks = () => {
 
                 {/* Section Header */}
                 <div className="mb-12 gap-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center">
                         Trending <span className="text-violet-600">Books</span>
                     </h2>
                 </div>

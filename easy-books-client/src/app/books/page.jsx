@@ -20,7 +20,7 @@ const page = async () => {
                 
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight">
+                    <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
                         Easy<span className="text-violet-600">Library</span>
                     </h1>
                     <p className="text-gray-500 text-lg mt-4">

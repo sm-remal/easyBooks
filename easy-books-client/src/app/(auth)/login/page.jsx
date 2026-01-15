@@ -11,7 +11,7 @@ const LoginPage = () => {
     const [error, setError] = useState("");
     const router = useRouter();
 
-    // Login with (Google/GitHub)
+    // Login with (Google/GitHub) 
     const handleSocialLogin = async (provider) => {
         setIsLoading(true);
         await signIn(provider, { callbackUrl: '/' });

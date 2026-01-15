@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { Quote, Star } from 'lucide-react';
+import Image from 'next/image';
 
 const reviews = [
     {
@@ -39,7 +40,7 @@ const Testimonials = () => {
                 
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <h3 className="text-4xl md:text-5xl font-black text-gray-900">
+                    <h3 className="text-3xl md:text-4xl font-black text-gray-900">
                         What Our <span className="text-violet-600">Readers</span> Say
                     </h3>
                 </div>
@@ -70,9 +71,11 @@ const Testimonials = () => {
 
                             {/* User Info */}
                             <div className="flex items-center gap-4 border-t border-gray-50 pt-6">
-                                <img 
+                                <Image 
                                     src={review.image} 
                                     alt={review.name} 
+                                    width={400}
+                                    height={400}
                                     className="w-14 h-14 rounded-full object-cover border-2 border-violet-100 shadow-md"
                                 />
                                 <div>

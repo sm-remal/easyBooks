@@ -28,8 +28,8 @@ const AuthorSpotlight = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Section Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                <div className="text-center mb-6">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
                         <span className="text-violet-600">Author</span> of the Month
                     </h2>
                     <p className="text-gray-500 max-w-2xl mx-auto mt-4 text-lg">
@@ -83,7 +83,7 @@ const AuthorSpotlight = () => {
                 </div>
 
                 {/* Featured Books by Author (Optional - can be in a separate section too) */}
-                <div className="mt-20 text-center">
+                <div className="mt-8 text-center">
                     <h3 className="text-3xl font-bold text-gray-900 mb-8">Her Bestselling Works</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {author.featuredBooks.map(book => (
