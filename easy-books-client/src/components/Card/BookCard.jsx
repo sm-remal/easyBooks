@@ -2,6 +2,7 @@
 import React from 'react';
 import { ShoppingCart, Eye, Star } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const BookCard = ({ book }) => {
     return (
@@ -40,9 +41,9 @@ const BookCard = ({ book }) => {
                         <Star size={16} className="fill-yellow-400 text-yellow-400" />
                         <span className="text-sm font-bold text-gray-700">{book.rating}</span>
                     </div>
-                    <button className="text-violet-600 font-bold text-sm hover:underline">
+                    <Link href={`/books/${book._id}`} className="text-violet-600 font-bold text-sm hover:underline">
                         View Details
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
