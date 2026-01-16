@@ -10,7 +10,7 @@ export const metadata = {
 const page = async () => {
     let books = [];
     try {
-        const res = await fetch('http://localhost:5000/books', { 
+        const res = await fetch('https://easybooks-server.vercel.app/books', { 
             cache: 'no-store' 
         });
         if (res.ok) {

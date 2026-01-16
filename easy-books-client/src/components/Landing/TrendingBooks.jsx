@@ -10,7 +10,7 @@ const TrendingBooks = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/books-latest')
+        fetch('https://easybooks-server.vercel.app/books-latest')
             .then(res => res.json())
             .then(data => {
                 setBooks(data);

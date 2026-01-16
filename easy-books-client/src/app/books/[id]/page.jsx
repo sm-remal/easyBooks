@@ -16,7 +16,7 @@ const DetailsPage = async ({ params }) => {
 
     let book = null;
     try {
-        const res = await fetch(`http://localhost:5000/books/${id}`, {
+        const res = await fetch(`https://easybooks-server.vercel.app/books/${id}`, {
             cache: 'no-store'
         });
         if (res.ok) {

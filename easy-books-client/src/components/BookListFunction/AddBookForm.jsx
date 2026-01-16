@@ -27,7 +27,7 @@ const AddBookForm = ({ userEmail }) => {
         };
 
         try {
-            const res = await fetch("http://localhost:5000/books", {
+            const res = await fetch("https://easybooks-server.vercel.app/books", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(bookData)
