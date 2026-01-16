@@ -27,10 +27,6 @@ const ContactPage = () => {
                 
                 {/* --- Header --- */}
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-100 text-violet-600 text-sm font-bold uppercase tracking-wider shadow-sm mb-4">
-                        <MessageSquare size={16} />
-                        <span>Get in Touch</span>
-                    </div>
                     <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
                         Let's start a <span className="text-violet-600">conversation.</span>
                     </h1>
