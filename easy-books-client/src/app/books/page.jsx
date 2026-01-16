@@ -1,6 +1,12 @@
 import React from 'react';
 import BookList from '@/components/BookListFunction/BookList';
 
+
+export const metadata = {
+  title: "All Books",
+  description: "Browse our extensive collection of books for your child.",
+};
+
 const page = async () => {
     let books = [];
     try {

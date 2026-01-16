@@ -5,7 +5,7 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 
 
 export const metadata = {
-    title: "Add Book | EasyBooks",
+    title: "Add Book",
     description: "Contribute a new book to our growing library",
 };
 

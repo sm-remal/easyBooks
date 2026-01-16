@@ -1,14 +1,15 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { useSession, signOut } from 'next-auth/react'; 
-import { LogOut, User } from 'lucide-react'; 
+import { useSession, signOut } from 'next-auth/react';
+import { LogOut, User } from 'lucide-react';
 import Image from 'next/image';
 import NavLink from '../Button/NavLink';
+// import logo from '/assets/logo-1.png';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isProfileOpen, setIsProfileOpen] = useState(false); 
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
     const { data: session } = useSession();
     const dropdownRef = useRef(null);
 
@@ -34,20 +35,26 @@ const NavBar = () => {
         <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/70 backdrop-blur-sm border-b border-violet-100 shadow-sm transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    
+
                     {/* Brand/Logo */}
                     <div className="shrink-0 flex items-center">
-                        <Link href="/" className="text-2xl font-bold text-violet-600">
-                            EasyBooks
+                        <Link href="/">
+                            <Image
+                                src="/assets/logo-1.png"
+                                width={500}           
+                                height={500}         
+                                alt='EasyBooks Logo'
+                                priority              
+                                className="w-auto h-68 object-contain -ml-12"
+                            />
                         </Link>
                     </div>
-
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
-                            <NavLink 
-                                key={link.name} 
-                                href={link.href} 
+                            <NavLink
+                                key={link.name}
+                                href={link.href}
                                 className="text-gray-700 hover:text-violet-500 font-medium transition-colors"
                             >
                                 {link.name}
@@ -57,7 +64,7 @@ const NavBar = () => {
                         {/* --- Auth Logic Start --- */}
                         {session ? (
                             <div className="relative" ref={dropdownRef}>
-                                <button 
+                                <button
                                     onClick={() => setIsProfileOpen(!isProfileOpen)}
                                     className="flex items-center gap-2 focus:outline-none"
                                 >
@@ -78,12 +85,12 @@ const NavBar = () => {
                                             <p className="text-sm font-bold text-gray-900 truncate">{session.user?.name}</p>
                                             <p className="text-xs text-gray-500 truncate">{session.user?.email}</p>
                                         </div>
-                                        
+
                                         <Link href="/profile" className="flex items-center gap-3 px-5 py-2.5 text-sm text-gray-700 hover:bg-violet-50 transition-colors">
                                             <User size={18} className="text-violet-500" /> My Profile
                                         </Link>
-                                        
-                                        <button 
+
+                                        <button
                                             onClick={() => signOut()}
                                             className="w-full flex items-center gap-3 px-5 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors"
                                         >
@@ -93,8 +100,8 @@ const NavBar = () => {
                                 )}
                             </div>
                         ) : (
-                            <Link 
-                                href="/login" 
+                            <Link
+                                href="/login"
                                 className="bg-violet-600 text-white px-6 py-2 rounded-lg hover:bg-violet-500 transition-all font-semibold shadow-md shadow-violet-200"
                             >
                                 Login

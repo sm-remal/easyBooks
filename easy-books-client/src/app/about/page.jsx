@@ -3,6 +3,10 @@ import { BookOpen, Users, Globe, Award, ArrowRight, Heart, Truck, ShieldCheck } 
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const metadata = {
+  title: "About Us",
+};
+
 const AboutPage = () => {
     return (
         <div className="bg-white min-h-screen pt-10 pb-20">

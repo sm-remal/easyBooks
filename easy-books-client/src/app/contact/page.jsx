@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ArrowRight, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const ContactPage = () => {
     
