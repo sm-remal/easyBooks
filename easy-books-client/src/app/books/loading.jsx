@@ -5,7 +5,7 @@ const loading = () => {
     return (
         <div className='grid grid-cols-4 gap-8'>
             {
-                [...Array(12).map((_, index) => <BookCardSkeleton key={index}></BookCardSkeleton>)]
+                [...Array(16).map((_, index) => <BookCardSkeleton key={index}></BookCardSkeleton>)]
             }
         </div>
     );
