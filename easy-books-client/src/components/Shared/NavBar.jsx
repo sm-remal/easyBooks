@@ -45,7 +45,7 @@ const NavBar = () => {
                                 height={500}         
                                 alt='EasyBooks Logo'
                                 priority              
-                                className="w-auto h-68 object-contain -ml-12"
+                                className="w-full h-12 object-contain"
                             />
                         </Link>
                     </div>

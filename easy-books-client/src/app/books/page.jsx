@@ -1,6 +1,7 @@
 import React from 'react';
 import BookList from '@/components/BookListFunction/BookList';
 
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "All Books",

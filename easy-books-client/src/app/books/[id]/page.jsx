@@ -11,6 +11,8 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const dynamic = "force-dynamic";
+
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
 
